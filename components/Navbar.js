@@ -5,7 +5,7 @@ import AuthContext from "../stores/authContext";
 
 export default function Navbar() {
   const { user, login, logout, authReady } = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
   return (
     <div className="container">
       <nav>
@@ -29,7 +29,7 @@ export default function Navbar() {
               </li>
             ) : (
               <>
-                <li>{user.email}</li>
+                <li>{user.user_metadata.full_name}</li>
                 <li onClick={logout} className="btn">
                   Logout
                 </li>
